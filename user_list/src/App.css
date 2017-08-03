@@ -22,3 +22,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.maindiv{
+  color:darkred;
+ display:inline-block;
+  margin-left: 10px;
+}
+
+.namediv{
+font-size: 1.25em;
+  font-weight: bold;
+}
+
+.divstyle{
+  margin:1em ;
+}
+.imgstyle{
+  width:75px;
+}

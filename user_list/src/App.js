@@ -4,16 +4,49 @@ import './App.css';
 
 const App =  (props)=>{
   return(
-      <div>
-          <img src="http://placehold.it/75"/>
-          <div>
-          <div>Name</div>
-          <div>Company</div>
+      <div className="divstyle">
+          <img className="imgstyle" src={props.avatar_url}/>
+          <div className="maindiv">
+          <div className="namediv">{props.name}</div>
+          <div>{props.Company}</div>
       </div>
       </div>
     )
 };
 
+
+
+let data = [
+    {
+        name:"mojombo",
+        avatar_url:"https://avatars0.githubusercontent.com/u/1?v=4",
+        Company:"Facebook"
+    },
+    {
+        name:"defunkt",
+        avatar_url:"https://avatars0.githubusercontent.com/u/2?v=4",
+        Company:"Twitter"
+    },
+    {
+        name:"pjhyett",
+        avatar_url:"https://avatars0.githubusercontent.com/u/3?v=4",
+        Company:"Google"
+    }
+];
+
+
+const cardlist = (props)=>{
+    return(
+        <div>
+            <App name="mojombo"
+                avatar_url="https://avatars0.githubusercontent.com/u/1?v=4"
+            Company="Facebook"/>
+
+
+
+        </div>
+    )
+};
 
 // class App extends Component {
 //   render() {
@@ -36,4 +69,4 @@ const App =  (props)=>{
 
 
 
-export default App;
+export default cardlist;
