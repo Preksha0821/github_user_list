@@ -51,8 +51,29 @@ const Cardlist = (props) => {
         </div>
     );
 };
+//class Form created to add a new card of the user
+class Form extends React.Component{
+    render(){
+        return(
+        <form>
+            <input type="text" placeholder="Github user"/>
+            <button type="submit">Add card</button>
+        </form>
+        );
+    }
+}
+//class App created to call the form and cardlist in single class
+class App extends React.Component{
+    render(){
+        return(
+            <div>
+                <Form/>
+                <Cardlist cards={data}/>
+            </div>
+        );
+    }
+}
 
 
-
-ReactDOM.render(<Cardlist cards={data}/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
